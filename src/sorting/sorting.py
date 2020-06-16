@@ -4,14 +4,24 @@ def merge(arrA, arrB):
     merged_arr = [0] * elements
 
     # Your code here
-
+       while a < len(A):
+            combined.append(A[a])
+            a += 1
+        while b < len(B):
+            combined.append(B[b])
+            b += 1
+            
+        return combined
 
     return merged_arr
 
 # TO-DO: implement the Merge Sort function below recursively
 def merge_sort(arr):
     # Your code here
-
+    if len(arr) > 1:
+        left = merge_sort(arr[:len(arr) // 2])
+        right = merge_sort(arr[len(arr) // 2:])
+        arr = merge(left, right)
 
     return arr
 
